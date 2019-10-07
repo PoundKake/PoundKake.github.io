@@ -1,0 +1,50 @@
+import React, { Component } from 'react'
+import Slide from '../slide'
+import LeftArrow from '../left-arrow'
+import RightArrow from '../right-arrow'
+
+export default class Slider extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      images: [
+        "../resources/Beach.gif",
+        "../resources/IMG_5536.gif",
+        // "../resources/Beach.gif",
+      ],
+      currentIndex: 0
+    }
+  }
+  
+  goToPrevSlide = () => {
+
+  }
+
+  goToNextSlide = () => {
+    this.setState(prevState => ({
+      currentIndex: prevState.currentIndex + 1
+    }));
+  }
+
+  render() {
+    return (
+      <div className="slider">
+
+        {
+          this.state.images.map((image, i) => (
+            <Slide key={i} image={image} />
+          ))
+        }
+
+        <LeftArrow
+         goToPrevSlide={this.goToPrevSlide}
+        />
+
+        <RightArrow
+         goToNextSlide={this.goToNextSlide}
+        />
+      </div>
+    );
+  }
+}

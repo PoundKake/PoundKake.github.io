@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page title</title>
+        <link href="main.css" rel="StyleSheet" type="text/css" media="screen">
+        <meta name="description" content="Personal Portfolio">
+    </head>
+
+    <body>
+        <!-- Slider for artwork.html -->
+        <img name="slide" width="400" height="200" />
+        <script> 
+                var i = 0;             // Counter.
+                var imgs = []; // Images to display in slideshow.
+
+                imgs[0] = "resources/Beach.gif";
+                imgs[1] = "resources/IMG_5536.gif";
+                var time = 3000;       // Time out value.
+    
+                // Change image function
+                function changeImage(){
+                    document.slide.src = imgs[i];
+                    if(i < imgs.length - 1) {
+                        i++;
+                    } 
+                    else {
+                        i = 0;
+                    }
+                    setTimeout("changeImage()", time);
+                }
+    
+                // Run function when page loads
+                window.onload=changeImage;
+        </script>
+
+    </body>
+</html>
+<!-- END -->
