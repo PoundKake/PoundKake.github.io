@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Christian Vance Portfolio</title>
+        <link href="css/main.css" rel="StyleSheet" type="text/css" media="screen">
+        <meta name="css/description" content="Personal Portfolio">
+    </head>
+    <body>
+        <!-- Main Page Header -->
+        <header>
+            <h1>    My Personal Portfolio    </h1>
+        </header>
+        <div style="align-content:center" class="links">
+            <ul id="menu">
+                <li><b>Home</b></li>
+                <li><b class="tab_divider"> | </b></li>
+                <li><a href="music.html">Music</a></li>
+                <!-- <li><b class="tab_divider"> | </b></li> -->
+                <!-- <li><a href="projects.html">Projects</a></li> -->
+                <li><b class="tab_divider"> | </b></li>
+                <li><a href="artwork.html">Artwork</a></li>
+            </ul>
+        </div>
+
+        <!-- Top Level Content -->
+        <div style="width:100%">
+            <div style="width:90%">
+                <div style="width:50%" id="paragraph">
+                    <h1 style="text-align:left">About</h1>
+                    <p class="content">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello! My name is Christian and
+                        this is a personal portfolio I have created to test my skills in HTML, CSS, and
+                        JavaScript. I chose to do this to have a place were I can collectively display
+                        some of my work as well as learn more about web development. Some of my
+                        professional projects can be found under the "Projects" tab. I am also a former
+                        music producer under the name Chanchey_ and I also do a little bit of artwork
+                        with pencil sketches and photography. Please check out the website and explore some
+                        of my work.
+                    </p>
+                </div>
+
+                <!-- Profile Picture -->
+                <div style="width:50%" id="profilepicture">
+                    <img 
+                        src="resources/StageProfilePicture.jpg" 
+                        alt="Christian Vance: PHS Talent Show" 
+                        width="500" 
+                        height="700" 
+                        align="right" 
+                        style="padding-top:25px"
+                    >
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Bottom Level Content -->
+    	<div style="width:90%">
+            <div style="width:50%" id="paragraph">
+
+                <!-- Professional Links -->
+                 <h1 style="text-align:left">Professional</h1>
+                 <p class="content">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Below are some professional links.  Please check them out.
+                 </p>
+                 <br> <!-- Line Break --> </br>
+                 <ul class="left">
+                     <li class="socialmedia"><a href="https://www.linkedin.com/in/christianvance/" target="_blank">LinkedIn</a></li>
+                     <li class="socialmedia"><a href="https://github.com/PoundKake" target="_blank">GitHub</a></li>
+                 </ul>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p style="text-align: center; margin-top: auto; margin-bottom: auto; font-size: 18px;"> Christian Vance </p>
+        </footer>
+    </body>
+</html>
