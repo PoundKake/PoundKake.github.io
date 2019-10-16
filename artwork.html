@@ -1,94 +1,55 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <title>Christian Vance Portfolio: Artwork</title>
-        <link href="css/main.css" rel="StyleSheet" type="text/css" media="screen">
-        <link href="css/slider.css" rel="StyleSheet" type="text/css" media="screen">
-        <meta name="description" content="Personal Portfolio">
-        <!-- <script type="text/javascript" src="scripts/slider.js"></script> -->
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="PoundKake">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <title>Personal Portfolio</title>
     </head>
-
     <body>
-         <!-- Main Page Header -->
-    	<header>
-    	    <h1>    Artwork	</h1>
-        </header>
+        <!-- Bootstap Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">CV</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Navigation Tabs -->
-        <div style="align-content:center" class="links">
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><b class="tab_divider"> | </b></li>
-                <li><a href="music.html">Music</a></li>
-                <!-- <li><b class="tab_divider"> | </b></li> -->
-                <!-- <li><a href="projects.html">Projects</a></li> -->
-                <li><b class="tab_divider"> | </b></li>
-                <li><b>Artwork</b></li>
-            </ul>
-        </div>
-
-        <!-- Top Centered Content Block -->
-        <div style="width:100%; height:10%;">
-            <div style="width:90%; height:10%; font-size:20px" >
-                <h2> About </h2>
-                <p style="font-size: 25px">
-                    One of my favorite pastimes is to create various forms of Art. Some of these include photography and pencil sketches. Both can be see below.
-                </p>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="artwork.html"> Artwork </a> <!-- <span class="sr-only">(current)</span> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="music.html"> Music </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item disabled" href="#">3D Printing</a>
+                            <a class="dropdown-item disabled" href="#">AMR</a>
+                            <a class="dropdown-item disabled" href="#">SMARS</a>
+                            <a class="dropdown-item disabled" href="#">Raspi</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="https://github.com/PoundKake">GitHub</a>
+                        </div>
+                    </li>
+                </ul>
             </div>
+        </nav>
+
+        <div class="container">
+            <!-- Content here -->
         </div>
 
-        <!-- Top Column Seperated Blocks -->
-        <div style="width:100%">
-            <div style="width:90%; height:10%; font-size:20px" >
-                <!-- Left Block  -->
-                <div style="width:45%" class="left">
-                    <h2> Photography </h2>
-                    <!-- Creating a dynamic slideshow -->
-                    <img name="slide" width="100%" height="70%" />
-                    <script> 
-                        var i = 0;          // Counter.
-                        var imgs = [        // Images to display in slideshow.
-                            "resources/Beach.gif",
-                            "resources/IMG_5536.gif"
-                        ];      
-                        var time = 20000;    // Time out value in milliseconds.
-            
-                        // Change image function
-                        function changeImage(){
-                            document.slide.src = imgs[i];
-                            if(i < imgs.length - 1) {
-                                i++;
-                            } 
-                            else {
-                                i = 0;
-                            }
-                            setTimeout("changeImage()", time);
-                        }
-            
-                        // Run function when page loads
-                        window.onload=changeImage;
-                    </script>
-                </div>
-
-                <!-- Right Block  -->
-                <div style="width:45%" class="right">
-                    <h2> Pencil Sketches </h2>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- Bottom Content -->
-        <div style="width:100%">
-            <div style="width:90%; height:10%; font-size:20px" >
-                <h2> Knitting </h2>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <p style="text-align: center; margin-top: auto; margin-bottom: auto; font-size: 18px;"> Christian Vance </p>
-        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
-<!-- END -->
