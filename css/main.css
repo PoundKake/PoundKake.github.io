@@ -5,7 +5,13 @@
  * Author: Christian Vance
  * Last Modified: 10/01/2018
  */
-/*********************** Classes's ***********************/
+/*********************** Elements ***********************/
+a:visited { text-decoration: none; color:#b91ec7; }
+a:hover { text-decoration: none; color:#b91ec7; }
+a:focus { text-decoration: none; color:gray; }
+a:active { text-decoration: none; color:rgb(14, 109, 101); }
+
+/*********************** Classes ***********************/
 .content-header {
     color:white;
 }
