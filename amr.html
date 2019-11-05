@@ -13,10 +13,9 @@
 
         <title>Personal Portfolio</title>
     </head>
-    
+
     <!-- Body -->
     <body class="bg-dark">
-
         <!-- Head Banner -->
         <header>
             <img src="resources/ChancheyAlbumCoverBanner.jpg" class="img-fluid " alt="Responsive image" style="width: 100%; height: 200px">
@@ -35,7 +34,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Projects </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="3dprinting.html">3D Printing</a>
-                            <a class="dropdown-item" href="amr.html">AMR</a>
+                            <a class="dropdown-item active" href="amr.html">AMR</a>
                             <a class="dropdown-item disabled" href="#">SMARS</a>
                             <a class="dropdown-item disabled" href="#">Raspi</a>
                             <div class="dropdown-divider"></div>
@@ -54,55 +53,93 @@
 
         <!-- Main Container -->
         <div class="container bg-dark">
-            <!-- About Content -->
+            <!-- Info Cell -->
             <div class="row">
                 <div class="col">
-                    <!-- Abstract -->
-                    <div class="row">
-                        <h1 class="content-header"> About </h1>
-                        <p class="content-txt">
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hello! My name is Christian and
-                            this is a personal portfolio I have created to test my skills in HTML, CSS, and
-                            JavaScript. I chose to do this to have a place were I can collectively display
-                            some of my work as well as learn more about web development. Some of my
-                            professional projects can be found under the "Projects" tab. I am also a former
-                            music producer under the name Chanchey_ and I also do a little bit of artwork
-                            with pencil sketches and photography. Please check out the website and explore some
-                            of my work.
-                        </p>
-                    </div>
-
-                    <!-- Divider Cell --> 
-                    <div class="row"> <!-- Cell Divider  --><br></br></div>                    
-
-                    <!-- Links -->
-                    <div class="row">
-                        <!-- Professional Links -->
-                        <h3 class="content-header"> Professional </h3>
-                        <p class="content-txt">
-                            Below is a link to my Linkedin account for professional growth.
-                        </p>
-                    </div>
-
-                    <!-- Social Media Links Row-->
-                    <div class="row">
-                        <!-- Social Media Links -->
-                        <ul>
-                            <li class="socialmedia"><a href="https://www.linkedin.com/in/christianvance/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">LinkedIn</a></li>
-                        </ul>
-                    </div>      
-                </div>
-                <!-- Discography Cell -->
-                <div class="col">
-                    <img 
-                        src="resources/StageProfilePicture.jpg" 
-                        alt="Christian Vance: PHS Talent Show" 
-                        width="500" 
-                        height="700" 
-                        style="padding-top:25px"
-                    ></img>
+                    <!-- R1C1 Content  -->
+                    <h1 class="content-header"> Abstract </h1>
+                    <p class="content-txt">
+                        There are numerous types of robots designed to allow life to be either easier or more 
+                        enjoyable. It is desired to develop such a robot that will continue this trend. Imagine 
+                        being able to map out the space and measurements of a room or any other enclosed area 
+                        by simply turning on a robot. The Autonomous Mapping Robot (AMR) project investigates 
+                        solutions to accomplish this task. The concept of the AMR is a robot that can move 
+                        around autonomously while simultaneously scan and map out as much of its surroundings as 
+                        possible while reporting its findings back to the user. This can be incredibly useful 
+                        for creating a topographical view of an entire area remotely. This approach of remote 
+                        surveying can also be utilized as a tool to explore areas that may not be safe or easily 
+                        accessible to humans.
+                    </p>
                 </div>
             </div>
+
+            <!-- Divider Cell -->
+            <div class="row">
+                <div class="col">
+                    <!-- Cell Divider  -->
+                    <br></br>
+                </div>
+            </div>
+            
+            <!-- Poster Presenation -->
+            <div class="row">
+                <div class="col">
+                    <!-- Poster Image -->
+                    <img src="resources/amr/poster.PNG" alt="Presenation" width="1000px" height="700px"></img>
+                </div>
+            </div>
+
+            <!-- Divider Cell -->
+            <div class="row">
+                <div class="col">
+                    <!-- Cell Divider  -->
+                    <br></br>
+                </div>
+            </div>
+
+            <!-- Photography Cell -->
+            <div class="row">
+                <div class="col">
+                    <!-- Photography Carousel -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:1000px; height:900px">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                        </ol>
+                        <div class="carousel-inner" style="width:1000px; height:900px">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="resources/amr/robot_1.PNG" alt="First slide">
+                            </div>                 
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="resources/amr/robot_2.PNG" alt="Second slide">
+                            </div>                           
+                            <!-- <div class="carousel-item">
+                                <img class="d-block w-100" src="..." alt="Third slide">
+                            </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider Cell -->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <!-- Cell Divider  -->
+                        <br></br>
+                    </div>
+                </div>
+            </div>
+
             <!-- Divider Cell -->
             <div class="container">
                 <div class="row">
