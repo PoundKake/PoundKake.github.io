@@ -6,8 +6,8 @@
  * Last Modified: 10/01/2018
  */
 /*********************** Elements ***********************/
-a:visited { text-decoration: none; color:#b91ec7; }
-a:hover { text-decoration: none; color:#b91ec7; }
+a:visited { text-decoration: none; color:rgb(19, 175, 162); } /* old value: #b91ec7; */
+a:hover { text-decoration: none; color:rgb(19, 175, 162); } /* old value: #b91ec7; */
 a:focus { text-decoration: none; color:gray; }
 a:active { text-decoration: none; color:rgb(14, 109, 101); }
 
@@ -62,7 +62,6 @@ a:active { text-decoration: none; color:rgb(14, 109, 101); }
 /* } */ 
 
 .footer-custom {
-    position:absolute;
     bottom:0;
     width:100%;
     height:60px;   /* Height of the footer */
