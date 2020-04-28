@@ -31,6 +31,17 @@ a:active { text-decoration: none; color:rgb(14, 109, 101); }
     font-size: 24px;
 }
 
+.drones {
+    color: rgb(19, 175, 162);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left:auto;
+    margin-right:auto;
+    list-style-type: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 /*********************** Boostrap Overides ***********************/
 /* change the background color */
 .navbar-custom {
