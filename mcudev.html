@@ -5,15 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="author" content="PoundKake">
-        
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Custom CSS and Boostrap Overides -->
         <link rel="stylesheet" href="css/main.css">
         <!-- MarDown to HTML Resource -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
-
         <title>Personal Portfolio</title>
     </head>
 
@@ -61,9 +57,9 @@
             <div class="row">
                 <div class="col">
                     <!-- R1C1 Content  -->
-                    <h1 class="content-header"> About </h1>
+                    <h1 class="content-header"> Microcontroller Development </h1>
                     <p class="content-txt">
-                        One of my favorite pastimes is to create various forms of Art. Some of these include photography and pencil sketches. Both can be see below.
+                        One of the many hobbies I work on is learning about microcontrollers. This is 
                     </p>
                 </div>
             </div>
@@ -76,7 +72,7 @@
                 </div>
             </div>
 
-            <!-- Photography Cell -->
+            <!-- Project Cell -->
             <div class="row">
                 <div class="col">
                     <!-- Grid Cell Header -->
@@ -96,34 +92,74 @@
                     <hr>
                     <h3 class="content-header">Fast PWM Mode:</h3>
                     <p>The pins listed below are the pins we will be using for the waveform generation of the PWM signal of two different color LED's.<br>
-                    <em>NOTE: These value where determined from the datasheets referenced above.</em></p>
+                    <em>NOTE: These value where determined from the datasheets referenced above.</em>
+                    </p>
                     <ul>
                         <li><strong>PB1</strong> (PCINT1/OC1A)</li>
                         <li><strong>PB2</strong> (PCINT2/SS/OC1B)</li>
                     </ul>
-                    <p>These pins are both on <strong>PORTB</strong> which means to use these pins as ouputs, we need to toggle their value in the Data Direction Register for PORTB (<strong>DDRB</strong>) high (logic 1).
-                    This can be done with the following statement:</p>
-                    <pre><code class="language-c"><div>DDRB |= <span class="hljs-number">0x03</span> <span class="hljs-comment">// This is equivalent to 0000 0011 and setting PB1 and PB2 as outputs.</span>
-                    </div></code></pre>
-                    <p>Next we are going to focus on the <strong>ICR1</strong> which we will use to define our TOP off value.
-                    This can be done with the following statement:</p>
-                    <pre><code class="language-c"><div>ICR1 = <span class="hljs-number">0xFFFF</span>; <span class="hljs-comment">// This is setting our TOP value to 16-bit max.</span>
-                    </div></code></pre>
+                    <p>
+                        These pins are both on <strong>PORTB</strong> which means to use these pins as ouputs, we need to toggle their value in the Data Direction Register for PORTB (<strong>DDRB</strong>) high (logic 1).
+                        This can be done with the following statement:
+                    </p>
+                    <pre><code>DDRB |= <span class="hljs-number">0x03</span> <span class="hljs-comment">// This is equivalent to 0000 0011 and setting PB1 and PB2 as outputs.</span></code></pre>
+                    <p>
+                        Next we are going to focus on the <strong>ICR1</strong> which we will use to define our TOP off value.
+                        This can be done with the following statement:
+                    </p>
+                    <pre><code>ICR1 = <span class="hljs-number">0xFFFF</span>; <span class="hljs-comment">// This is setting our TOP value to 16-bit max.</span></code></pre>
                     <p>Once our cut off is defined</p>
-                    <p>Next we are going to focus on the <strong>OCR1A</strong> which we will use to define our compare value. Otherwise the TCNT1 will just reset when the TOP value is reached.
-                    This can be done with the following statement:</p>
-                    <pre><code class="language-c"><div>OCR1A = <span class="hljs-number">0x00FF</span>; <span class="hljs-comment">// This should produce a duty cycle of 50%.</span>
-                    </div></code></pre>
+                    <p>
+                        Next we are going to focus on the <strong>OCR1A</strong> which we will use to define our compare value. Otherwise the TCNT1 will just reset when the TOP value is reached.
+                        This can be done with the following statement:
+                    </p>
+                    <pre><code>OCR1A = <span class="hljs-number">0x00FF</span>; <span class="hljs-comment">// This should produce a duty cycle of 50%.</span></code></pre>
                     <p>Next we need to focus on setting the proper modes of the timer/counter.</p>
-                    <p>More specifically we want a non-inverting, Fast PWM waveform that uses ICR1 as the TOP value with no prescaling.
-                    This can be done with the following statement:</p>
-                    <pre><code class="language-c"><div>TCCR1A |= (<span class="hljs-number">1</span> &lt;&lt; WGM11);
-                    TCCR1B |= (<span class="hljs-number">1</span> &lt;&lt; WGM12)|(<span class="hljs-number">1</span> &lt;&lt; WGM13);
-                    <span class="hljs-comment">// set Fast PWM mode using ICR1 as TOP</span>
-                    TCCR1B |= (<span class="hljs-number">1</span> &lt;&lt; CS10);  <span class="hljs-comment">// START the timer with no prescaler.</span>
-                    </div></code></pre>
+                    <p>
+                        More specifically we want a non-inverting, Fast PWM waveform that uses ICR1 as the TOP value with no prescaling.
+                        This can be done with the following statement:
+                    </p>
+                    <pre><code>TCCR1A |= (<span class="hljs-number">1</span> &lt;&lt; WGM11);
+TCCR1B |= (<span class="hljs-number">1</span> &lt;&lt; WGM12)|(<span class="hljs-number">1</span> &lt;&lt; WGM13);
+<span class="hljs-comment">// set Fast PWM mode using ICR1 as TOP</span>
+TCCR1B |= (<span class="hljs-number">1</span> &lt;&lt; CS10);  <span class="hljs-comment">// START the timer with no prescaler.</span></code></pre>
+<p>Now that we have the initial configuration set-up for the microcontroller,  it is time to look at the main logic of the program. To start we must consider the cyclic nature of  “breathing pulse” to be able to model this behaviour into an LED. When the term “cyclic” is used, people often first think of a sine or cosine wave. There are a few problems to consider with this model though. Both sine and cosine waves have vertical bounds of 1 and -1 and limitless horizontal bounts (they go on forever). We can fix the vertical limitation easily enough with some manipulation of the function but the limitless horizontal bound might be tricky since infinity and computers often don't get along. One potential solution around this is to have a repeating while loop which alters the function after every iteration so that the values it is calculating get reset and never increase beyond something a computer can’t handle. The mathematica model can be seen below as well as our solution to the ever growing values of the cosine function. I have chosen to use a modulo which will return the remainder of the two values divided by each other. This will keep our value between 0 and 360 (or 2*pi in radians).</p>
+<img src="resources/mcu/DesmosCapture1.PNG" alt="" width="100%" height="12%">
+<p>The solution below represents two leds pulses modeled with the above equation with different phase shifts.</p>
+<pre><code class="language-c"><span class="hljs-comment">// Main function</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+	<span class="hljs-keyword">char</span> pin5 = <span class="hljs-number">0x20</span>; <span class="hljs-comment">// This defines the DDRx Register for PORTB. This should be 0001 0000</span>
+	blinkOnBoardLEDConfig(pin5);
+	fastPWMModeCofig();
+	<span class="hljs-comment">//changeFastPWMDutyCycle(OCR1A);</span>
+	<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> <span class="hljs-keyword">int</span> x1 = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> <span class="hljs-keyword">int</span> x2 = <span class="hljs-number">90</span>;
+	
+	<span class="hljs-comment">/* Replace with your application code */</span>
+	<span class="hljs-keyword">while</span>(<span class="hljs-number">1</span>)
+	{
+		<span class="hljs-keyword">double</span> fx1 = ((<span class="hljs-number">-0.5</span>)*<span class="hljs-built_in">cos</span>((x1*M_PI)/<span class="hljs-number">180</span>) + <span class="hljs-number">0.5</span>);
+		<span class="hljs-keyword">double</span> fx2 = ((<span class="hljs-number">-0.5</span>)*<span class="hljs-built_in">cos</span>((x2*M_PI)/<span class="hljs-number">180</span>) + <span class="hljs-number">0.5</span>);
+		<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> <span class="hljs-keyword">int</span> y1 = <span class="hljs-number">0xFFFF</span>*fx1;
+		<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">short</span> <span class="hljs-keyword">int</span> y2 = <span class="hljs-number">0xFFFF</span>*fx2;
+		OCR1A = y1;
+		OCR1B = y2;
+		x1 %= <span class="hljs-number">360</span>;
+		x2 %= <span class="hljs-number">360</span>;
+		x1++;
+		x2++;
+		_delay_ms(<span class="hljs-number">15</span>);
+		
+		<span class="hljs-comment">// This blinks an led on and off. Useful for debugging and testing of the MCU control</span>
+		<span class="hljs-comment">//blinkOnBoardLED(pin5, DELAY_VAL_MS);</span>
+	}
+	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
                 </div>
             </div>
+
             <!-- Divider Cell -->
             <div class="container">
                 <div class="row">

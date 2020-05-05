@@ -11,6 +11,13 @@ a:hover { text-decoration: none; color:rgb(19, 175, 162); } /* old value: #b91ec
 a:focus { text-decoration: none; color:gray; }
 a:active { text-decoration: none; color:rgb(14, 109, 101); }
 
+pre code {
+    background-color: #eee;
+    display: block;
+    text-align: left;
+    padding: 20px;
+  }
+
 /*********************** Classes ***********************/
 .content-header {
     color: dimgray;
@@ -41,6 +48,23 @@ a:active { text-decoration: none; color:rgb(14, 109, 101); }
     font-size: 24px;
     font-weight: bold;
 }
+
+.hljs-number {
+    color: rgb(32, 62, 195);
+}
+
+.hljs-comment {
+    color: rgb(29, 138, 71);
+}
+
+.hljs-function {
+    color: rgb(189, 72, 209);
+}
+
+.hljs-keyword {
+    color: rgb(33, 167, 172);
+}
+
 
 /*********************** Boostrap Overides ***********************/
 /* change the background color */
